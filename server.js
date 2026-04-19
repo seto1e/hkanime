@@ -90,7 +90,7 @@ $(‘a[href*=”/detail/”]’).each((i, el) => {
 const name = $(el).find(‘img’).attr(‘alt’) || $(el).text().trim()
 const href = $(el).attr(‘href’) || ‘’
 const pic = $(el).find(‘img’).attr(‘src’) || ‘’
-const slug = href.replace(’/detail/’, ‘’).replace(//$/, ‘’)
+const slug = href.replace(’/detail/’, ‘’).replace(/\/$/, '')
 if (name) {
 list.push({
 vod_id: encodeURIComponent(slug),
