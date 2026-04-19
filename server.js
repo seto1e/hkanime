@@ -26,7 +26,7 @@ const name = $(el).find(‘img’).attr(‘alt’) || $(el).text().trim()
 const pic = $(el).find(‘img’).attr(‘src’) || ‘’
 const remarks = $(el).find(’[class*=“count”]’).text().trim() || ‘’
 if (name && href) {
-const slug = href.replace(’/detail/’, ‘’).replace(//$/, ‘’)
+const slug = href.replace(’/detail/’, ‘’).replace(/\/$/, '')
 list.push({
 vod_id: encodeURIComponent(slug),
 vod_name: name,
