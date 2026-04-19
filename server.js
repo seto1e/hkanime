@@ -137,6 +137,6 @@ app.get(’/’, (req, res) => {
 res.send(‘HKanime API OK’)
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 3000, '0.0.0.0', () => {
 console.log(’Server running on port ’ + PORT)
 })
