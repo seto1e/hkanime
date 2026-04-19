@@ -57,7 +57,7 @@ const episodes = []
 $(‘a[href*=”/play/”]’).each((i, el) => {
 const href = $(el).attr(‘href’) || ‘’
 const epName = $(el).text().trim() || (‘EP’ + (i + 1))
-if (href.match(//play/.+/\d+x\d+/)) {
+if (href.match(/\/play\/.+\/\d+x\d+/)) {
 episodes.push({ href, epName })
 }
 })
